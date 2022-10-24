@@ -1,4 +1,4 @@
-This repository contains reference implementation for ROMANCE paper (non-official)
+This repository contains reference implementation for ROMANCE paper (unofficial)
 
 ## Environment Installation
 
@@ -41,9 +41,3 @@ We provide pre-trained agents (vanilla QMIX), advesarial attackers and robust tr
 bash run_evaluate.sh 2s3z
 bash run_evaluate.sh 3s_vs_3z
 ```
-
-## License
-
-Code is available for review for AAAI 2023 only. Do not distribute.
-
-Some modules are useless and will be deleted in the future. Please ignore such modules.
