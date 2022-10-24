@@ -1,4 +1,4 @@
-This repository contains reference implementation for ROMANCE paper (submitted to AAAI 2023), **Robust Multi-agent Coordination via Evolutionary Generation of Auxiliary Adversarial Attackers**.
+This repository contains reference implementation for ROMANCE paper (non-official)
 
 ## Environment Installation
 
