@@ -1,4 +1,4 @@
-This repository contains reference implementation for ROMANCE paper (unofficial)
+This repository contains reference implementation for ROMANCE paper
 
 ## Environment Installation
 
