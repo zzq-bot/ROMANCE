@@ -1,3 +1,5 @@
+# Robust Multi-agent Coordination via Evolutionary Generation of Auxiliary Adversarial Attackers
+
 This repository contains reference implementation for ROMANCE paper
 
 ## Environment Installation
