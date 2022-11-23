@@ -41,3 +41,9 @@ We provide pre-trained agents (vanilla QMIX), advesarial attackers and robust tr
 bash run_evaluate.sh 2s3z
 bash run_evaluate.sh 3s_vs_3z
 ```
+
+## License
+All the source code that has been taken from the EPyMARL repository was licensed (and remains so) under the Apache License v2.0 (included in LICENSE file). Any new code is also licensed under the Apache License v2.0.
+
+## Citation
+TBD
