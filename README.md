@@ -48,11 +48,11 @@ bash run_evaluate.sh 3s_vs_3z
 
 ## Visualization of Attack and Defense
 
-![visualization](.\assets\visualization.png)
+![image](assets/visualization.png)
 
 ## Comparison with Baselines
 
-![table1](.\assets\table1.png)
+![image](assets/table1.png)
 
 
 
