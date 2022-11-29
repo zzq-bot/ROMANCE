@@ -48,7 +48,7 @@ bash run_evaluate.sh 3s_vs_3z
 
 ## Visualization of Attack and Defense
 
-![image](assets/visualization.png)
+<img src="assets/visualization.png" alt="visualization" style="zoom:67%;" />
 
 ## Comparison with Baselines
 
