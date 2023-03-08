@@ -3,7 +3,6 @@ attrs==21.4.0
 autopep8==1.6.0
 brotlipy==0.7.0
 cachetools==5.0.0
-certifi==2021.10.8
 charset-normalizer==2.0.12
 cloudpickle==2.0.0
 colorama==0.4.4
@@ -12,9 +11,7 @@ deepdiff==5.7.0
 docopt==0.6.2
 enum34==1.1.10
 fonttools==4.31.2
-future==0.18.2
 gitdb==4.0.9
-GitPython==3.1.27
 google-auth==2.6.2
 google-auth-oauthlib==0.4.6
 grpcio==1.45.0
@@ -23,7 +20,7 @@ gym-notices==0.0.6
 imageio==2.16.1
 importlib-metadata==4.11.3
 iniconfig==1.1.1
-joblib==1.1.0
+joblib
 jsonpickle==0.9.6
 kiwisolver==1.4.2
 Markdown==3.3.6
@@ -34,19 +31,17 @@ mock==4.0.3
 mpmath==1.2.1
 mpyq==0.2.5
 munch==2.5.0
-nvidia-ml-py3==7.352.0
-oauthlib==3.2.0
 opencv-python==4.5.5.64
 ordered-set==4.0.2
 packaging==21.3
 pandas==1.3.5
-Pillow==9.1.0
+Pillow
 pluggy==1.0.0
 portpicker==1.5.0
 probscale==0.2.5
-protobuf==3.20.0
+protobuf
 psutil==5.9.0
-py==1.11.0
+py
 py-cpuinfo==8.0.0
 pyasn1==0.4.8
 pyasn1-modules==0.2.8
@@ -79,7 +74,7 @@ tensorboardX==2.5
 threadpoolctl==3.1.0
 toml==0.10.2
 tomli==2.0.1
-torch==1.11.0
+torch
 torch-scatter==2.0.9
 torchaudio==0.11.0
 torchvision==0.12.0
@@ -87,7 +82,6 @@ tornado==6.1
 tqdm==4.64.0
 urllib3==1.26.9
 websocket-client==1.3.2
-Werkzeug==2.1.1
 whichcraft==0.6.1
 wrapt==1.14.0
 zipp==3.8.0
