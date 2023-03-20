@@ -65,13 +65,13 @@ class AttackMAC(BasicMAC):
         self.attacker_action_selector.set_attacker_args(attacker.p_ref, attacker.lamb)
 
     def forward(self, ep_batch, t, test_mode=False):
-        agent_inputs = self._build_inputs(ep_batch, t)
+        #agent_inputs = self._build_inputs(ep_batch, t)
         avail_actions = ep_batch["avail_actions"][:, t]
-        agent_outs, _ = self.agent(agent_inputs, self.hidden_states)
+        #agent_outs, _ = self.agent(agent_inputs, self.hidden_states)
 
         # update hidden_states using real executed actions
         forced_inputs = self._build_forced_inputs(ep_batch, t)
-        _, self.hidden_states = self.agent(forced_inputs, self.hidden_states)
+        agent_outs, self.hidden_states = self.agent(forced_inputs, self.hidden_states)
 
         # Softmax the agent outputs if they're policy logits
         if self.agent_output_type == "pi_logits":
