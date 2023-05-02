@@ -185,6 +185,7 @@ class Population:
             else:
                 loss = q_loss + d_loss
             print(f"q loss: {q_loss}; d_loss: {d_loss}")"""
+            loss = q_loss + d_loss
         #optimize
         self.optimiser.zero_grad()
         loss.backward()
