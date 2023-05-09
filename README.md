@@ -1,5 +1,6 @@
 # Robust Multi-agent Coordination via Evolutionary Generation of Auxiliary Adversarial Attackers
 
+> 🚧 During my code review, I discovered that the code has some significant flaws in struture (and is quite ugly). As a result, I am currently reorganizing the structure to improve its readability and overall quality. I plan to republish the source code within the next month. I apologize for any inconvenience this may cause. 🚧
 This repository contains implementation for Robust Multi-agent Coordination via Evolutionary Generation of Auxiliary Adversarial Attackers (ROMANCE).
 
 This work is accepted as Oral at the Association for the Advancement of Artificial Intelligence (AAAI) 2023.
@@ -61,5 +62,12 @@ bash run_evaluate.sh 3s_vs_3z
 All the source code that has been taken from the EPyMARL repository was licensed (and remains so) under the Apache License v2.0 (included in LICENSE file). Any new code is also licensed under the Apache License v2.0.
 
 ## Citation
-TBD
 
+```tex
+@inproceedings{romance,
+  title={Robust Multi-agent Coordination via Evolutionary Generation of Auxiliary Adversarial Attackers},
+  author={Yuan, Lei and Zhang, Ziqian and Xue, Ke and  Yin, Hao and   Chen,  Feng and  Guan, Cong and  Li, Lihe and  Qian, Chao and  Yu, Yang},
+  booktitle={AAAI},
+  year={2023}
+}
+```
