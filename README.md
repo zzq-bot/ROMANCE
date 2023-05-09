@@ -1,7 +1,6 @@
 # Robust Multi-agent Coordination via Evolutionary Generation of Auxiliary Adversarial Attackers
 
 > 🚧 During my code review, I discovered that the code has some significant flaws in struture (and is quite ugly). As a result, I am currently reorganizing the structure to improve its readability and overall quality. I plan to republish the source code within the next month. I apologize for any inconvenience this may cause. 🚧
-This repository contains implementation for Robust Multi-agent Coordination via Evolutionary Generation of Auxiliary Adversarial Attackers (ROMANCE).
 
 This work is accepted as Oral at the Association for the Advancement of Artificial Intelligence (AAAI) 2023.
 
