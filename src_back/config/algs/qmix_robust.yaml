@@ -1,0 +1,37 @@
+# --- QMIX ego-agent specific parameters ---
+
+# use epsilon greedy action selector
+action_selector: "epsilon_greedy_attack"
+#epsilon_start: 0.1
+#epsilon_finish: 0.02
+epsilon_start: 0.1
+epsilon_finish: 0.02
+epsilon_anneal_time: 8000
+#t_env
+
+runner: "episode_robust"
+
+buffer_size: 8000
+
+# update the target network every {} episodes
+target_update_interval: 200
+
+# use the Q_Learner to train
+agent_output_type: "q"
+learner: "q_learner"
+double_q: True
+mixer: "qmix"
+mixing_embed_dim: 32
+hypernet_layers: 2
+hypernet_embed: 64
+
+name: "romance"
+
+# --- Default Attacker specific parameters --- #
+attacker: "mlp" # Default mlp agent
+attacker_hidden_dim: 64 # Size of hidden dim for default mlp attacker
+attack_mode: "action"
+attacker_action_selector: "sparse"
+ega_soft_tau: 0.005
+attacker_buffer_size: 1000 # small -> care recent trajs
+local_results_path: "robust_results"
