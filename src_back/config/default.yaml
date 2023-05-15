@@ -50,7 +50,7 @@ label: "default_label"
 population_train_steps: 6
 population_train_num: 1
 individual_sample_episode: 4
-save_archive_interval: 100
+save_archive_interval: 400
 select_strategy: "random"
 spare_lambda: 0.04
 attack_batch_size: 10
@@ -97,9 +97,3 @@ sparse_ref_delta: 0.05
 #sparse_ref_delta: 0
 load_sparse_ref_delta: 0.05
 train_random: False
-
-
-num_episodes_collected: 2000
-max_size: 4000
-offline_data_quality: "expert"
-collect_type: "noise"

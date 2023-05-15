@@ -143,7 +143,7 @@ class EpisodeRobustRunner:
                     point_1 = th.FloatTensor(pre_transition_attack_data["state"])
                     point_2 = th.FloatTensor(pre_transition_attack_data["left_attack"])
                     point = th.cat([point_1, point_2], dim=1)
-                    padding_points.append(point)
+                    attack_points.append(point)
 
             if attack_cnt == attack_num and self.args.truncation:
                 print("use_truncation")

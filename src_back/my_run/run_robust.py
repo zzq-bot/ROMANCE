@@ -1,7 +1,6 @@
 import datetime
 import os
 import pprint
-import json
 import threading
 import torch as th
 import numpy as np
@@ -25,6 +24,7 @@ def run_robust(_run, _config, _log):
 
     args = SN(**_config)
     args.device = "cuda" if args.use_cuda else "cpu"
+    th.cuda.set_device(args.gpu_id)
 
     # setup loggers
     logger = Logger(_log)
@@ -35,19 +35,14 @@ def run_robust(_run, _config, _log):
                                        width=1)
     _log.info("\n\n" + experiment_params + "\n")
 
-    results_save_dir = args.results_save_dir
-    
-    if args.use_tensorboard and not args.evaluate:
-        # only log tensorboard when in training mode
-        tb_exp_direc = os.path.join(results_save_dir, 'tb_logs')
+    # configure tensorboard logger
+    unique_token = "{}__{}".format(args.name, datetime.datetime.now().strftime("%Y-%m-%d_%H-%M-%S"))
+    args.unique_token = unique_token
+    if args.use_tensorboard:
+        tb_logs_direc = os.path.join(dirname(dirname(abspath(__file__))), "results", "tb_logs")
+        tb_exp_direc = os.path.join(tb_logs_direc, "{}").format(unique_token)
         logger.setup_tb(tb_exp_direc)
-        
-        # write config file
-        config_str = json.dumps(vars(args), indent=4)
-        with open(os.path.join(results_save_dir, "config.json"), "w") as f:
-            f.write(config_str)
 
-    args.save_dir = os.path.join(results_save_dir, 'models')
     # sacred is on by default
     logger.setup_sacred(_run)
 
@@ -293,16 +288,19 @@ def run_sequential(args, logger):
 
             archive.update(population, last_attack_points, last_mean_return, last_mean_won)
 
-        if gen == 0 or (gen + 1) % args.save_archive_interval == 0:
+        if (gen + 1) % args.save_archive_interval == 0:
             # save attackers
-            save_path = os.path.join(args.save_dir, "attackers", str(gen + 1))
+            save_path = os.path.join(args.local_results_path, "robust_attacker_archive",
+                                     args.env_args["map_name"] + f"_{args.attack_num}", args.unique_token, str(gen + 1))
             print(f"save generations {gen + 1} in {save_path}")
             os.makedirs(save_path, exist_ok=True)
             logger.console_logger.info("Saving models to {}".format(save_path))
             archive.save_models(save_path)
 
             # save ego-agents
-            save_path = os.path.join(args.save_dir, "agents", str(gen + 1))
+            save_path = os.path.join(args.local_results_path, "ego_agents",
+                                     args.env_args["map_name"] + f"_{args.attack_num}",
+                                     args.unique_token, str(gen + 1))
             os.makedirs(save_path, exist_ok=True)
             logger.console_logger.info("Saving ego-agents models to {}".format(save_path))
             learner.save_models(save_path)

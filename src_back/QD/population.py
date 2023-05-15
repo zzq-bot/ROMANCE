@@ -190,7 +190,7 @@ class Population:
         self.optimiser.zero_grad()
         loss.backward()
         grad_norm = th.nn.utils.clip_grad_norm_(self.params, self.args.grad_norm_clip)
-        #print(f"grad_norm: {grad_norm}")
+        print(f"grad_norm: {grad_norm}")
         if th.any(th.isnan(grad_norm)):
             return False
         self.optimiser.step()

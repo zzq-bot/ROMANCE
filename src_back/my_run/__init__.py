@@ -14,6 +14,3 @@ REGISTRY["attack_na"] = run_attack_na
 
 from .eval_na import run_eval_na
 REGISTRY["eval_na"] = run_eval_na
-
-from .collect_run import run
-REGISTRY["collect"] = run

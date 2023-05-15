@@ -25,7 +25,6 @@ class Archive:
         self.cur_size = 0
         self.cur_gen = 0
         self.attackers = []
-        self.name2attackers = {}
         self.setup_bahavior()
         self.setup_schedule()
 
@@ -236,7 +235,6 @@ class Archive:
             full_name = os.path.join(load_path, f"attacker_{i}.th")
             attacker = a_REGISTRY[self.args.attacker](self.args, load=True).to(self.args.device)
             attacker.load_state_dict(th.load(full_name, map_location=lambda storage, loc: storage))
-            self.name2attackers[f"attacker_{i}"] = attacker
             self.attackers.append(attacker)
             self.behaviors.append([])
             self.quality_scores.append(0)
