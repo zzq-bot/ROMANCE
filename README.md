@@ -1,6 +1,6 @@
 # Robust Multi-agent Coordination via Evolutionary Generation of Auxiliary Adversarial Attackers
 
-> 🚧 During my code review, I discovered that the code has some significant flaws in struture (and is quite ugly). As a result, I am currently reorganizing the structure to improve its readability and overall quality. I plan to republish the source code within the next month. I apologize for any inconvenience this may cause. The original code is temporally put in src_back folder.🚧
+> 🚧 During my code review, I discovered that the code has some significant flaws in readability. As a result, I am currently reorganizing the structure to improve its overall quality. I plan to republish the source code within next 2 months. I apologize for any inconvenience this may cause. The original code is temporally put in src_back folder.🚧
 
 This work is accepted as Oral at the Association for the Advancement of Artificial Intelligence (AAAI) 2023.
 
