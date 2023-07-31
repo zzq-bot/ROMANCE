@@ -176,7 +176,7 @@ class Population:
             attacker_ac_dim = self.args.n_agents+1
 
             d_loss = -self.args.jsd_beta * F.kl_div(attacker_action_dists.reshape(-1, attacker_ac_dim).log(),
-                                mean_action_dist.reshape(-1, attacker_ac_dim).detach(), reduction="batchmean")
+                                mean_action_dist.reshape(-1, attacker_ac_dim).detach(), reduction="batchmean") / 10
             #d_loss = -self.args.jsd_beta * F.kl_div(attacker_action_dists.reshape(-1, attacker_ac_dim).log(),
             #                    mean_action_dist.reshape(-1, attacker_ac_dim).detach(), reduction="batchmean")
             """if th.isinf(d_loss).any():
