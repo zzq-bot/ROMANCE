@@ -23,7 +23,7 @@ Some example scripts have been provided. The code allows various parameters in t
 By running:
 
 ```shell
-python3 src/main.py --config=qmix_robust --env-config=sc2 with env_args.map_name=2s3z
+python3 src/main.py --config=qmix_attack --env-config=sc2 with env_args.map_name=2s3z
 ```
 
 diverse adversarial attackers against trained ego-system under SMAC 2s3z map can be generated.
